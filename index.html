@@ -1,49 +1,92 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>“3 Rs” of Jack Johnson</title>
-    
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <script type="text/javascript" src="audio.js"></script>
 </head>
+
 <body>
-    <p>Listen to this song entitled “3 Rs” of Jack Johnson.</p>
-    <p>I encourage you to fill the blanks that you can find in the lyrics of the song that follows:</p>
-    <br>
-    <audio controls>
-        <source src="audio.mp3" type="audio/mpeg">
-      Your browser does not support the audio element.
-      </audio>
-    <p>Three, it's a <input type="text"> number</p>
-    <p>Yes it is, it's a magic number</p>
-    <p>Because two <input type="text"> three is six</p>
-    <p>And three times six is eighteen</p>
-    <p>And the <input type="text"> letter in the alphabet is <input type="text"></p>
-    <p>We've got three R's we're going to talk about today</p>
-    <p>We've got to learn to <input type="text">, Reuse, Recycle</p>
-    <p>Reduce, Reuse, <input type="text"></p>
-    <p>Reduce, <input type="text">, Recycle</p>
-    <p>Reduce, Reuse, Recycle</p>
-    <p>If you're going to the market to buy some <input type="text"></p>
-    <p>You've got to bring your own <input type="text"></p>
-    <p>and you learn to reduce your <input type="text"></p>
-    <p>And if your brother or your sister's got some <input type="text"> clothes</p>
-    <p>You could <input type="text"> them on before you buy some more of those</p>
-    <p>Reuse, we've got to learn to reuse</p>
-    <p>And if the first two R's don't <input type="text"> out</p>
-    <p>And if you've got to make some <input type="text"></p>
-    <p>Don't <input type="text"> it out</p>
-    <p>Recycle, we've got to learn to recycle,</p>
-    <p>We've got to learn to Reduce, Reuse, Recycle</p>
-    <p>Reduce, Reuse, Recycle</p>
-    <p>Reduce, Reuse, Recycle</p>
-    <p>Reduce, Reuse, Recycle</p>
-    <p>Because three it's a magic number</p>
-    <p>Yes it is, it's a magic number</p>
+    <main class="container flex-column p-3">
+        <h3 class="pt-5">Listen to this song entitled “3 Rs” of Jack Johnson.<br>
+            I encourage you to fill the blanks that you can find in the lyrics of the song that follows:</h3>
+        <br>
+        <div class="pb-3">
+            <audio controls>
+                <source src="audio.mp3" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
+        </div>
+        <br>
+        <p class="lead">Three, it's a <input class="form-control" type="text" id="magic"
+                onsubmit="return FormValidation();" onchange="return FormValidation();"
+                style="width: 20em; display: inline;"> number</p>
+        <p class="lead">Yes it is, it's a magic number</p>
+        <p class="lead">Because two <input class="form-control" type="text" id="times"
+                onsubmit="return FormValidation();" onchange="return FormValidation();"
+                style="width: 20em; display: inline;"> three is six</p>
+        <p class="lead">And three times six is eighteen</p>
+        <p class="lead">And the <input class="form-control" type="text" id="eighteenth"
+                onsubmit="return FormValidation();" onchange="return FormValidation();"
+                style="width: 20em; display: inline;"> letter in the alphabet is <input class="form-control" type="text"
+                id="r" onsubmit="return FormValidation();" onchange="return FormValidation();"
+                style="width: 20em; display: inline;"></p>
+        <p class="lead">We've got three R's we're going to talk about today</p>
+        <p class="lead">We've got to learn to <input class="form-control" type="text" id="reduce"
+                onsubmit="return FormValidation();" onchange="return FormValidation();"
+                style="width: 20em; display: inline;">, Reuse, Recycle</p>
+        <p class="lead">Reduce, Reuse, <input class="form-control" type="text" id="recycle"
+                onsubmit="return FormValidation();" onchange="return FormValidation();"
+                style="width: 20em; display: inline;"></p>
+        <p class="lead">Reduce, <input class="form-control" type="text" id="reuse" onsubmit="return FormValidation();"
+                onchange="return FormValidation();" style="width: 20em; display: inline;">, Recycle</p>
+        <p class="lead">Reduce, Reuse, Recycle</p>
+        <p class="lead">If you're going to the market to buy some <input class="form-control" type="text" id="juice"
+                onsubmit="return FormValidation();" onchange="return FormValidation();"
+                style="width: 20em; display: inline;"></p>
+        <p class="lead">You've got to bring your own <input class="form-control" type="text" id="bags"
+                onsubmit="return FormValidation();" onchange="return FormValidation();"
+                style="width: 20em; display: inline;"></p>
+        <p class="lead">and you learn to reduce your <input class="form-control" type="text" id="waste"
+                onsubmit="return FormValidation();" onchange="return FormValidation();"
+                style="width: 20em; display: inline;"></p>
+        <p class="lead">And if your brother or your sister's got some <input class="form-control" type="text" id="cool"
+                onsubmit="return FormValidation();" onchange="return FormValidation();"
+                style="width: 20em; display: inline;"> clothes</p>
+        <p class="lead">You could <input class="form-control" type="text" id="try" onsubmit="return FormValidation();"
+                onchange="return FormValidation();" style="width: 20em; display: inline;"> them on before you buy some
+            more of those</p>
+        <p class="lead">Reuse, we've got to learn to reuse</p>
+        <p class="lead">And if the first two R's don't <input class="form-control" type="text" id="work"
+                onsubmit="return FormValidation();" onchange="return FormValidation();"
+                style="width: 20em; display: inline;"> out</p>
+        <p class="lead">And if you've got to make some <input class="form-control" type="text" id="trash"
+                onsubmit="return FormValidation();" onchange="return FormValidation();"
+                style="width: 20em; display: inline;"></p>
+        <p class="lead">Don't <input class="form-control" type="text" id="throw" onsubmit="return FormValidation();"
+                onchange="return FormValidation();" style="width: 20em; display: inline;"> it out</p>
+        <p class="lead">Recycle, we've got to learn to recycle,</p>
+        <p class="lead">We've got to learn to Reduce, Reuse, Recycle</p>
+        <p class="lead">Reduce, Reuse, Recycle</p>
+        <p class="lead">Reduce, Reuse, Recycle</p>
+        <p class="lead">Reduce, Reuse, Recycle</p>
+        <p class="lead">Because three it's a magic number</p>
+        <p class="lead">Yes it is, it's a magic number</p>
+    </main>
 </body>
 <footer>
-    <script src="https://www.youtube.com/iframe_api"></script>
-    <script src="https://cdn.rawgit.com/labnol/files/master/yt.js"></script>
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+        crossorigin="anonymous"></script>
+
+
 </footer>
+
 </html>
